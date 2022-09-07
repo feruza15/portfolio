@@ -32,3 +32,16 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def register(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        username=request.POST['username']
+        password1=request.POST['password1']
+        password2=request.POST['password2']
+        user=student.objects.created_user
+        username=username,
+        email=email
+        user.save()
+    return redirect('/')
