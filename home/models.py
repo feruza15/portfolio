@@ -13,3 +13,10 @@ class SendMessage(models.Model):
     email = models.CharField(max_length=150, null=True)
     subject = models.CharField(max_length=100, null=True)
     message = models.CharField(max_length=50, null=True)
+
+class Student(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=150, null=True)
+    username = models.CharField(max_length=150, null=True)
+    password1 = models.CharField(max_length=150, null=True)
+    password2 = models.CharField(max_length=150, null=True)
